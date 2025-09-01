@@ -1,3 +1,7 @@
+
+console.log("signup.js loaded ✅");
+
+
 const form = document.querySelector(".signup form"),
     continueBtn = form.querySelector(".button input"),
     errorText = form.querySelector(".error-txt");
@@ -7,24 +11,24 @@ form.onsubmit = (e) => {
 }
 
 continueBtn.onclick = () => {
+    console.log("Button clicked ✅");
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "php/signup.php", true);
     xhr.onload = () => {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
-                let data = xhr.response;
-                if (data == "success") {
+                let data = xhr.response.trim();
+                console.log(data); // 
+                if (data === "success") {
                     location.href = "users.php";
                 } else {
                     errorText.textContent = data;
-                    errorText.computedStyleMap.display = "block";
-
+                    errorText.style.display = "block";
                 }
             }
         }
     }
 
-    // send the data to php thhrough ajax
     let formData = new FormData(form);
     xhr.send(formData);
 }

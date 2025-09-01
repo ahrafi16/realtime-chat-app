@@ -1,44 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php include_once "header.php" ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real Time Chat app</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
 
 <body>
     <div class="wrapper">
         <section class="form login">
             <header>Realtime Chat app</header>
-            <form action="#">
-                <div class="error-txt">This is an error messsage !</div>
+            <form action="#" method="POST">
+                <div class="error-txt"></div>
                 <div class="field input">
                     <label for="email">Email Address</label>
                     <input type="text" name="email" placeholder="Enter your email">
                 </div>
                 <div class="field input">
-                    <label for="pass">Password</label>
-                    <input type="password" name="pass" placeholder="Enter your password">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" placeholder="Enter your password">
                     <i class="fa-solid fa-eye"></i>
                 </div>
 
                 <div class="field button">
-                    <input type="submit" value="Continue to chat">
+                    <input type="button" value="Continue to chat">
                 </div>
             </form>
             <div class="link">
-                Not yet signed up? <a href="#">Signup now</a>
+                Not yet signed up? <a href="index.php">Signup now</a>
             </div>
         </section>
     </div>
 
 
     <script src="js/pass-show-hide.js"></script>
+    <script src="js/login.js"></script>
 </body>
 
 </html>

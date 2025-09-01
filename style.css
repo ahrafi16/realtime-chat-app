@@ -229,7 +229,7 @@ a .content {
     background: #333;
 }
 
-.users .search button.active i::before{
+.users .search button.active i::before {
     content: "\f00d";
 }
 
