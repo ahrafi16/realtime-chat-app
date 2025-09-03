@@ -31,19 +31,7 @@ if (!isset($_SESSION['unique_id'])) {
                 </div>
             </header>
             <div class="chat-box">
-                <div class="chat outgoing">
-                    <div class="details">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita dolores quasi repellendus
-                            corrupti corporis. Officiis iusto dolores sit nostrum possimus.</p>
-                    </div>
-                </div>
-                <div class="chat incoming">
-                    <img src="" alt="">
-                    <div class="details">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita dolores quasi repellendus
-                            corrupti corporis. Officiis iusto dolores sit nostrum possimus.</p>
-                    </div>
-                </div>
+                
             </div>
 
             <form action="#" class="typing-area" autocomplete="off">
