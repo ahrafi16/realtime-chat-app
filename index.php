@@ -11,8 +11,12 @@ if (isset($_SESSION['unique_id'])) {
 
 <body>
     <div class="wrapper">
+
         <section class="form signup">
-            <header>Realtime Chat app</header>
+            <div class="header-container left">
+                <img src="assets/chat_logo.png" alt="Talksy Logo" class="logo">
+                <header>Talksy</header>
+            </div>
             <form action="#" enctype="multipart/form-data">
                 <div class="error-txt">This is an error messsage !</div>
                 <div class="name-details">

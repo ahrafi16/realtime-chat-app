@@ -10,7 +10,8 @@ form.onsubmit = (e) => {
 // Handle button click
 continueBtn.onclick = () => {
     let xhr = new XMLHttpRequest();
-    xhr.open("POST", "/chat_app/php/login.php", true);
+    // xhr.open("POST", "/chat_app/php/login.php", true);
+    xhr.open("POST", "php/login.php", true);
 
     xhr.onload = () => {
         if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {

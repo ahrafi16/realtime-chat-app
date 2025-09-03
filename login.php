@@ -3,8 +3,12 @@
 
 <body>
     <div class="wrapper">
+        <img src="#" alt="">
         <section class="form login">
-            <header>Realtime Chat app</header>
+            <div class="header-container left">
+                <img src="assets/chat_logo.png" alt="Talksy Logo" class="logo">
+                <header>Talksy</header>
+            </div>
             <form action="#" method="POST">
                 <div class="error-txt"></div>
                 <div class="field input">

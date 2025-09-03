@@ -2,6 +2,7 @@
 session_start();
 if (!isset($_SESSION['unique_id'])) {
     header("location:login.php");
+    exit();
 }
 ?>
 
@@ -12,9 +13,16 @@ if (!isset($_SESSION['unique_id'])) {
         <section class="users">
             <?php
             include_once "php/config.php";
-            $sql =  mysqli_query($conn, "SELECT * FROM users WHERE unique_id = {$_SESSION['unique_id']}");
-            if (mysqli_num_rows($sql) > 0) {
-                $row = mysqli_fetch_assoc($sql);
+            $stmt = $conn->prepare("SELECT * FROM users WHERE unique_id = ?");
+            $stmt->bind_param("i", $_SESSION['unique_id']);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            if ($result->num_rows > 0) {
+                $row = $result->fetch_assoc();
+            } else {
+                session_destroy();
+                header("location: login.php");
+                exit();
             }
             ?>
             <header>

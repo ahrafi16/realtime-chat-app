@@ -17,4 +17,5 @@ if (isset($_SESSION['unique_id'])) {
     }
 } else {
     header("../login.php");
+    exit();
 }
